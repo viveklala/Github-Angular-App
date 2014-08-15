@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="githubPublicRepos">
+<head>
+    <script src="js/angular.min.js"></script>
+    <script src="js/controllers/main.js"></script>
+    <script src="js/services/publicReposService.js"></script>
+    <script src="js/services/repoStatsService.js"></script>
+    <script src="js/services/userStatsService.js"></script>
+    <script src="js/directives/repoTileDirective.js"></script>
+    <script src="js/core.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>The First Hundred</title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+    <link rel="stylesheet" href="css/octicons/octicons.css">
+
+</head>
+
+<body ng-controller="mainController">
+    <div class="container">
+        <div class="title">
+            <h1>The First Hundred</h1>
+            <p class="lead">Here is a listing of the first 100 public repositories on Github. To view some stats on the repo, mouse-over the avatar of the repository.
+            Click on the user name or repo name to go to the associated Github page.</p>
+        </div>
+        <div class="row row-centered">
+            <div class:"col-xs-4 col-centered col-fixed">Icon Legend</div>
+            <div class="col-xs-4 card col-centered col-fixed">
+                <div><span class="octicon octicon-octoface"></span> : User Name</div>
+                <div><span class="octicon octicon-repo"></span> : Repo Name</div>
+                <div><span class="octicon octicon-book"></span> : Repo Description</div>
+                <div><span class="octicon octicon-octoface"></span> <span class="octicon octicon-person-follow"></span> : # of User Followers</div>
+                <div><span class="octicon octicon-octoface"></span> <span class="octicon octicon-repo"></span> : # of User's Public Repos</div>
+                <div><span class="octicon octicon-repo"></span> <span class="octicon octicon-eye"></span> : # of Repo Watchers</div>
+                <div><span class="octicon octicon-repo"></span> <span class="octicon octicon-repo-forked"></span> : # of Repo Forks</div>
+                <div><span class="octicon octicon-repo"></span> <span class="octicon octicon-code"></span> : Repo's Language</div>
+            </div>
+        </div>
+        <div class="row row-centered">
+            <div class="col-xs-4 card col-centered col-fixed" ng-repeat="repo in repos">
+                <repo-tile></repo-tile>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

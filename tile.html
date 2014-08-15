@@ -1,0 +1,15 @@
+<div>
+    <img ng-mouseover="showRepoDetails(repo.url, repo.owner.url, $index); showStats = true; showRepo = false" ng-mouseleave="showStats = false; showRepo = true;" class="thumb" ng-src="{{repo.owner.avatar_url}}">
+    <div ng-show="showRepo">
+        <div><span class="octicon octicon-octoface"></span> : <a href="{{repo.owner.html_url}}" target="_blank">{{repo.owner.login}}</a></div>
+        <div class="repo_ellipse"><span class="octicon octicon-repo"></span> : <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></div>
+        <div class="desc_ellipse"><span class="octicon octicon-book"></span> : {{repo.description}}</div>
+    </div>
+    <div ng-show="showStats">
+        <div><span class="octicon octicon-octoface"></span> <span class="octicon octicon-person-follow"></span> : {{repo.userStats.followers}}</div>
+        <div><span class="octicon octicon-octoface"></span> <span class="octicon octicon-repo"></span> : {{repo.userStats.public_repos}}</div>
+        <div><span class="octicon octicon-repo"></span> <span class="octicon octicon-eye"></span> : {{repo.repoStats.watchers}}</div>
+        <div><span class="octicon octicon-repo"></span> <span class="octicon octicon-repo-forked"></span> : {{repo.repoStats.forks}}</div>
+        <div><span class="octicon octicon-repo"></span> <span class="octicon octicon-code"></span> : {{repo.repoStats.language}}</div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+.thumb {
+    margin: 0px 10px 0px 0px;
+    border-radius: 10px;
+    float:left;
+    height:auto;
+    max-width:100px;
+}
+
+.card {
+    border-radius: 10px;
+    border:  1px solid #677c89;;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    vertical-align:text-top;
+
+}
+.col-fixed {
+    /* custom width */
+    width:350px;
+}
+
+.repo_ellipse {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: 20px; /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.desc_ellipse {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: 59px; /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title {
+  text-align: center;
+}

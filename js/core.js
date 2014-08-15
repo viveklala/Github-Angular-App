@@ -1,0 +1,1 @@
+angular.module('githubPublicRepos', ['githubRepoController', 'publicReposService', 'repoStatsService', 'userStatsService', 'repoTileDirective'])
